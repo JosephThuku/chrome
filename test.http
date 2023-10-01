@@ -1,0 +1,9 @@
+@name=Video Upload
+POST http://localhost:8000/videos/
+Content-Type: multipart/form-data
+
+--form-data
+Content-Disposition: form-data; name="video_chunk"; filename="sample.mp4"
+Content-Type: video/mp4
+
+</home/thuku/2023-09-25 15-24-48.mkv>
