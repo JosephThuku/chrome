@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mpr5v8jek40pxg6cc0p+3-+o&^nq^x9dp_du#pbcok(02wh=xi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['jthuku.pythonanywhere.com']
 
 
 # Application definition
@@ -137,4 +137,3 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/videos/')
 
 CHUNKED_UPLOAD_PATH = 'chunked_uploads/'
-
