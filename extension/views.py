@@ -3,7 +3,7 @@ import os
 from django.conf import settings
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework import status
+from rest_framework import status, generics
 from .serializers import VideoSerializer
 from .models import Video
 import base64
@@ -82,3 +82,7 @@ def generate_transcription(video_path):
     # Extract and return the transcription
     transcription = response['text']
     return transcription
+
+class VedioUpload(generics.ListCreateAPIView):
+    queryset = Video.objects.all()
+    serializer_class = VideoSerializer
