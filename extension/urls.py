@@ -1,9 +1,9 @@
 # video_api/urls.py
 from django.urls import path
-from .views import video_list, video_detail,VedioUpload
+from . import views
 
 urlpatterns = [
-    path('chunks/', video_list, name='video-list'),
-    path('videos/<int:pk>/', video_detail, name='video-detail'),
-    path('videos/', VedioUpload.as_view(), name='video-list')
+    path('videos/', views.VideoUpload.as_view(), name='video-upload'),
+    path('videos/<int:pk>/', views.video_detail, name='video-detail'),
+    path('upload/', views.upload_and_create_video, name='upload-and-create-video'),  # New endpoint for combined upload and creation
 ]
