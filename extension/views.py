@@ -11,6 +11,8 @@ import uuid
 import time
 # Set your OpenAI API key
 import openai
+from drf_yasg import openapi
+
 openai.api_key = ("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")
 
 
